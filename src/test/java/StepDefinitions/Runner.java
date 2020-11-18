@@ -7,9 +7,10 @@ import io.cucumber.junit.Cucumber;
 
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features="src\\test\\resources\\features",glue={"StepDefinitions"})
+@CucumberOptions(features="src\\test\\resources\\features",glue={"StepDefinitions"},
 
-
+monochrome = true,
+plugin= {"pretty","json:target/JSONReports"})
 public class Runner {
 
 }
