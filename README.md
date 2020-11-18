@@ -2,8 +2,10 @@
 A Cucumber BDD Project using Cucumber, Selenium, Java & JUnit dependecies.
 We have used Maven to build the application and manange the dependencies.
 
-Versions used : 
-  <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
+Versions OF libraries used : 
+
+
+   		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
 		    <artifactId>cucumber-java</artifactId>
 		    <version>6.9.0</version>
 
