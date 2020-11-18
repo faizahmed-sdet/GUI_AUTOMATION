@@ -43,7 +43,8 @@ public class LaunchCalculator
 		new WebDriverWait(driver, 10).until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.id("fullframe")));
 		WebElement canvas = new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(By.id("canvas")));
 		Rectangle dl = canvas.getRect();
-		System.out.println("Assalamualaikum");
+		System.out.println("Height of Canvas is : " + dl.height);
+		System.out.println("Width of Canvas is : " + dl.width);
 	    
 	}	
 	
