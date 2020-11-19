@@ -54,17 +54,22 @@ public class FullscreenCalculatorPage {
 	{
 		System.out.println("Hello");
 		
-		new Actions(driver).moveToElement(canvas, 0, 0).moveByOffset(-139,100).click().build().perform();//1
-		new Actions(driver).moveToElement(canvas, 0, 0).moveByOffset(XAXIS-69,YAXIS*10).click().build().perform();
-		new Actions(driver).moveToElement(canvas, 0, 0).moveByOffset(XAXIS,YAXIS*10).click().build().perform();
-		new Actions(driver).moveToElement(canvas, 0, 0).moveByOffset(XAXIS-139,YAXIS*1).click().build().perform();
-		new Actions(driver).moveToElement(canvas, 0, 0).moveByOffset(XAXIS-69,YAXIS).click().build().perform();
-		new Actions(driver).moveToElement(canvas, 0, 0).moveByOffset(XAXIS,YAXIS).click().build().perform();
-		new Actions(driver).moveToElement(canvas, 0, 0).moveByOffset(XAXIS-139,-10).click().build().perform();
-		new Actions(driver).moveToElement(canvas, 0, 0).moveByOffset(-69,-10).click().build().perform();
-		divideBy();
-		new Actions(driver).moveToElement(canvas, 0, 0).moveByOffset(0,-10).click().build().perform();//9
-		new Actions(driver).moveToElement(canvas, 0, 0).moveByOffset(-139,150).click().build().perform();//0
+		try {
+			new Actions(driver).moveToElement(canvas, 0, 0).moveByOffset(-139,100).click().build().perform();//1
+			new Actions(driver).moveToElement(canvas, 0, 0).moveByOffset(XAXIS-69,YAXIS*10).click().build().perform();
+			new Actions(driver).moveToElement(canvas, 0, 0).moveByOffset(XAXIS,YAXIS*10).click().build().perform();
+			new Actions(driver).moveToElement(canvas, 0, 0).moveByOffset(XAXIS-139,YAXIS*1).click().build().perform();
+			new Actions(driver).moveToElement(canvas, 0, 0).moveByOffset(XAXIS-69,YAXIS).click().build().perform();
+			new Actions(driver).moveToElement(canvas, 0, 0).moveByOffset(XAXIS,YAXIS).click().build().perform();
+			new Actions(driver).moveToElement(canvas, 0, 0).moveByOffset(XAXIS-139,-10).click().build().perform();
+			new Actions(driver).moveToElement(canvas, 0, 0).moveByOffset(-69,-10).click().build().perform();
+			divideBy();
+			new Actions(driver).moveToElement(canvas, 0, 0).moveByOffset(0,-10).click().build().perform();//9
+			new Actions(driver).moveToElement(canvas, 0, 0).moveByOffset(-139,150).click().build().perform();//0
+		} catch (MoveTargetOutOfBoundsException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		Thread.sleep(3000);
 		//clearScreen();
@@ -86,15 +91,61 @@ public class FullscreenCalculatorPage {
 			e.printStackTrace();
 		}
 	}
-	public static void prese2()	{new Actions(driver).moveToElement(canvas, 0, 0).moveByOffset(XAXIS-69,YAXIS*10).click().build().perform();}
-	public static void prese3()	{new Actions(driver).moveToElement(canvas, 0, 0).moveByOffset(XAXIS,YAXIS*10).click().build().perform();}
-	public static void prese4()	{new Actions(driver).moveToElement(canvas, 0, 0).moveByOffset(XAXIS-139,YAXIS*1).click().build().perform();}
-	public static void prese5()	{new Actions(driver).moveToElement(canvas, 0, 0).moveByOffset(XAXIS-69,YAXIS).click().build().perform();}
-	public static void prese6()	{new Actions(driver).moveToElement(canvas, 0, 0).moveByOffset(XAXIS,YAXIS).click().build().perform();}
-	public static void prese7()	{new Actions(driver).moveToElement(canvas, 0, 0).moveByOffset(XAXIS-139,YAXIS*-1).click().build().perform();}
-	public static void prese8()	{new Actions(driver).moveToElement(canvas, 0, 0).moveByOffset(XAXIS-69,YAXIS*-1).click().build().perform();}
-	public static void prese9()	{new Actions(driver).moveToElement(canvas, 0, 0).moveByOffset(XAXIS, YAXIS*-1).click().build().perform();}
-	public static void prese0()	{new Actions(driver).moveToElement(canvas, 0, 0).moveByOffset(XAXIS-139,YAXIS*15).click().build().perform();}
+	public static void prese2()	{try {
+		new Actions(driver).moveToElement(canvas, 0, 0).moveByOffset(XAXIS-69,YAXIS*10).click().build().perform();
+	} catch (MoveTargetOutOfBoundsException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}}
+	public static void prese3()	{try {
+		new Actions(driver).moveToElement(canvas, 0, 0).moveByOffset(XAXIS,YAXIS*10).click().build().perform();
+	} catch (MoveTargetOutOfBoundsException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}}
+	public static void prese4()	{try {
+		new Actions(driver).moveToElement(canvas, 0, 0).moveByOffset(XAXIS-139,YAXIS*1).click().build().perform();
+	} catch (MoveTargetOutOfBoundsException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}}
+	
+	public static void prese5()	{try {
+		new Actions(driver).moveToElement(canvas, 0, 0).moveByOffset(XAXIS-69,YAXIS).click().build().perform();
+	} catch (MoveTargetOutOfBoundsException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}}
+	public static void prese6()	{try {
+		new Actions(driver).moveToElement(canvas, 0, 0).moveByOffset(XAXIS,YAXIS).click().build().perform();
+	} catch (MoveTargetOutOfBoundsException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}}
+	public static void prese7()	{try {
+		new Actions(driver).moveToElement(canvas, 0, 0).moveByOffset(XAXIS-139,YAXIS*-1).click().build().perform();
+	} catch (Exception e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}}
+	public static void prese8()	{try {
+		new Actions(driver).moveToElement(canvas, 0, 0).moveByOffset(XAXIS-69,YAXIS*-1).click().build().perform();
+	} catch (MoveTargetOutOfBoundsException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}}
+	public static void prese9()	{try {
+		new Actions(driver).moveToElement(canvas, 0, 0).moveByOffset(XAXIS, YAXIS*-1).click().build().perform();
+	} catch (MoveTargetOutOfBoundsException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}}
+	public static void prese0()	{try {
+		new Actions(driver).moveToElement(canvas, 0, 0).moveByOffset(XAXIS-139,YAXIS*15).click().build().perform();
+	} catch (MoveTargetOutOfBoundsException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}}
 	
 	//org.openqa.selenium.interactions.MoveTargetOutOfBoundsException
 	
