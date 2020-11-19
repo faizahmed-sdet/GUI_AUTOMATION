@@ -34,11 +34,7 @@
 		    <version>2.14.0</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.xwiki.contrib/application-ocr-api -->
-		<dependency>
-		    <groupId>org.xwiki.contrib</groupId>
-		    <artifactId>application-ocr-api</artifactId>
-		    <version>1.1</version>
-		</dependency>
+
 				
   </dependencies>
 </project>

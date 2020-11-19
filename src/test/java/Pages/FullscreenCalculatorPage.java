@@ -16,8 +16,8 @@ public class FullscreenCalculatorPage {
 	
 	public static WebDriver driver;
 	
-	private By calculatorCanvas = By.id("canvas");
-	private By ifullFrame = By.id("fullframe");
+	private static By calculatorCanvas = By.id("canvas");
+	private static By ifullFrame = By.id("fullframe");
 	private By navigateBackToSmallCalculator = By.xpath("//a[@title='Back to Homepage']");
 	private static String WEBURL = "https://www.online-calculator.com/full-screen-calculator/";
 	private String CHROME_DRIVER_PATH = "";
@@ -36,12 +36,12 @@ public class FullscreenCalculatorPage {
 	
 	
 	
-	@SuppressWarnings("deprecation")
+	
 	public static void navigate_To_OnlineCalculator()
 	{
 		driver.get(WEBURL);
-		new WebDriverWait(driver, 10).until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.id("fullframe")));
-		canvas = new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(By.id("canvas")));
+		new WebDriverWait(driver, Duration.ofMillis(10000)).until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(ifullFrame));
+		canvas = new WebDriverWait(driver, Duration.ofMillis(10000)).until(ExpectedConditions.elementToBeClickable(calculatorCanvas));
 		dl = canvas.getRect();
 		System.out.println("sysioos");
 		System.out.println(XAXIS);
