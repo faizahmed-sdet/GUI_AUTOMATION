@@ -14,7 +14,7 @@ import Pages.FullscreenCalculatorPage;
 import io.cucumber.java.en.*;
 
 
-public class LaunchCalculator 
+public class LaunchCalculatorSteps 
 {
 	
 	@Given("^Browser is Opened$")

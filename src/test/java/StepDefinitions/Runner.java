@@ -5,8 +5,6 @@ import io.cucumber.junit.CucumberOptions;
 import io.cucumber.junit.Cucumber;
 
 
-
-
 	@RunWith(Cucumber.class)
 
 	
@@ -14,7 +12,7 @@ import io.cucumber.junit.Cucumber;
 	//Features and Glue attributes link with each other.
 	@CucumberOptions(
 		features="src\\test\\resources\\features",
-		glue={"StepDefinitions"},
+		glue={"LaunchCalculatorSteps"},
 		monochrome = true,
 		plugin= {"pretty","json:target/JSONReports"}
 	)
