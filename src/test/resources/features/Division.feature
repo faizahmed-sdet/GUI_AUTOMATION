@@ -3,4 +3,4 @@ Feature: feature to test smoke functionality
 Scenario: Validate the Division operation
 Given Two positive non zero numbers
 When second number divides first
-Then Correct Value is Derived
+Then Correct Value is Derived from division

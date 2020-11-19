@@ -10,7 +10,7 @@ import io.cucumber.java.en.*;
 //Then Correct Value is Derived
 public class SubtractionSteps {
 	
-	@Given("^Two positive numbers$")
+	@Given("Launch Application and provide Two positive non zero numbers")
 	public void Launch_Application()
 	{
 		FullscreenCalculatorPage.launch_Chrome_Browser();
@@ -27,11 +27,15 @@ public class SubtractionSteps {
 		
 		FullscreenCalculatorPage.prese2();
 		
+		FullscreenCalculatorPage.equalsTo();
+		
 	}
 	
 	@Then("^Correct Value is Derived$")
 	public void verify_Remainder_Value_For_Subtraction()
 	{
+		System.out.println("Hello");
+		FullscreenCalculatorPage.closeBrowser();
 		//Using OCR code
 	}
 

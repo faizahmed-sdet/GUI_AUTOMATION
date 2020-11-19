@@ -12,8 +12,10 @@ import io.cucumber.junit.Cucumber;
 	//Features and Glue attributes link with each other.
 	@CucumberOptions(
 		features="src\\test\\resources\\features",
-		glue={"LaunchCalculatorSteps"},
+		
+		glue={"StepDefinitions"},
 		monochrome = true,
+		publish = true,
 		plugin= {"pretty","json:target/JSONReports"}
 	)
 

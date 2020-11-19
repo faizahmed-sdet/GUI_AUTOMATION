@@ -4,12 +4,10 @@ import Pages.FullscreenCalculatorPage;
 import io.cucumber.java.en.*;
 
 public class DivisionSteps {
-//	
-//	Scenario: Validate the Division operation
-//	Given Two positive non zero numbers
-//	When second number divides first
-//	Then Correct Value is Derived
-	@Given("^Launch Application and provide Two positive non zero numbers$")
+
+	
+	
+	@Given("^Two positive non zero numbers$")
 	public void Launch_Application()
 	{
 		FullscreenCalculatorPage.launch_Chrome_Browser();
@@ -26,11 +24,14 @@ public class DivisionSteps {
 		
 		FullscreenCalculatorPage.prese2();
 		
+		FullscreenCalculatorPage.equalsTo();
+		
 	}
 	
-	@Then("^Correct Value is Derived$")
+	@Then("^Correct Value is Derived from division$")
 	public void verify_Remainder_Value()
 	{
+		FullscreenCalculatorPage.closeBrowser();
 		//Using OCR code
 	}
 	

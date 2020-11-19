@@ -8,6 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.interactions.MoveTargetOutOfBoundsException;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -69,7 +70,10 @@ public class FullscreenCalculatorPage {
 		//clearScreen();
 	}
 	//Numbers
-	
+	public static void closeBrowser()
+	{
+		driver.quit();
+	}
 	public static void prese1()	
 	{
 		try
@@ -95,11 +99,42 @@ public class FullscreenCalculatorPage {
 	//org.openqa.selenium.interactions.MoveTargetOutOfBoundsException
 	
 	//Equals 
-	public static void equalsTo() {new Actions(driver).moveToElement(canvas, 0, 0).moveByOffset(139,150).click().build().perform();}
-	public static void divideBy() {new Actions(driver).moveToElement(canvas, 0, 0).moveByOffset(XAXIS+69,-10).click().build().perform();}
-	public static void multiplyBy() {new Actions(driver).moveToElement(canvas, 0, 0).moveByOffset(XAXIS+69,10).click().build().perform();}
-	public static void subtractFrom() {new Actions(driver).moveToElement(canvas, 0, 0).moveByOffset(XAXIS+69,100).click().build().perform();}
-	public static void clearScreen() {new Actions(driver).moveToElement(canvas, 0, 0).moveByOffset(XAXIS+139,YAXIS*-10).click().build().perform();}
+	public static void equalsTo() {
+		try {
+			Thread.sleep(3000);
+			new Actions(driver).moveToElement(canvas, 0, 0).moveByOffset(139,150).click().build().perform();
+		} catch (MoveTargetOutOfBoundsException e) {
+			
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}}
+	public static void divideBy() {try {
+		new Actions(driver).moveToElement(canvas, 0, 0).moveByOffset(XAXIS+69,-10).click().build().perform();
+	} catch (MoveTargetOutOfBoundsException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}}
+	public static void multiplyBy() {try {
+		new Actions(driver).moveToElement(canvas, 0, 0).moveByOffset(XAXIS+69,10).click().build().perform();
+	} catch (MoveTargetOutOfBoundsException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}}
+	public static void subtractFrom() {try {
+		new Actions(driver).moveToElement(canvas, 0, 0).moveByOffset(XAXIS+69,100).click().build().perform();
+	} catch (MoveTargetOutOfBoundsException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}}
+	public static void clearScreen() {try {
+		new Actions(driver).moveToElement(canvas, 0, 0).moveByOffset(XAXIS+139,YAXIS*-10).click().build().perform();
+	} catch (MoveTargetOutOfBoundsException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}}
 
 
 }
